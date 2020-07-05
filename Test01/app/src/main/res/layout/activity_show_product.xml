@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e62f17"
+    android:orientation="vertical"
+    tools:context=".view.customer_activity.ShowCustomerActivity">
+
+    <include
+        android:id="@+id/toolbarCustomer"
+        layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_create_cus"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lay_one"
+            tools:ignore="MissingConstraints">
+
+
+            <EditText
+                android:id="@+id/edt_search_pro"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:hint="Search By Code"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toStartOf="@id/btn_search_pro"
+                app:layout_constraintHorizontal_weight="0.70"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_search_pro"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/border_edt"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Search"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.30"
+                app:layout_constraintStart_toEndOf="@id/edt_search_pro"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imgDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#7f7f7f"
+                app:layout_constraintTop_toBottomOf="@id/btn_search_pro" />
+
+            <Button
+                android:id="@+id/btn_update_pro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="28dp"
+                android:background="@drawable/border_edt"
+                android:padding="4dp"
+                android:text="Edit"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toStartOf="@+id/btn_delete_pro"
+                app:layout_constraintHorizontal_weight="0.20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgDivider"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <Button
+                android:id="@+id/btn_delete_pro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:background="@drawable/border_edt"
+                android:padding="4dp"
+                android:text="Delete"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.20"
+                app:layout_constraintStart_toEndOf="@id/btn_update_pro"
+                app:layout_constraintTop_toBottomOf="@id/imgDivider"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <TextView
+                android:id="@+id/txt_code_pro_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="Code :  "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/edt_code_pro_view"
+                app:layout_constraintHorizontal_weight="0.30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_delete_pro"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <EditText
+                android:id="@+id/edt_code_pro_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.70"
+                app:layout_constraintStart_toEndOf="@id/txt_code_pro_show"
+                app:layout_constraintTop_toBottomOf="@id/btn_delete_pro"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <TextView
+                android:id="@+id/txt_name_pro_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="Name :  "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/txt_name_pro_view"
+                app:layout_constraintHorizontal_weight="0.30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_code_pro_view"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <EditText
+                android:id="@+id/txt_name_pro_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.70"
+                app:layout_constraintStart_toEndOf="@id/txt_name_pro_show"
+                app:layout_constraintTop_toBottomOf="@id/edt_code_pro_view"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <TextView
+                android:id="@+id/txt_price_pro_show"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="Price :  "
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/txt_price_pro_view"
+                app:layout_constraintHorizontal_weight="0.30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_name_pro_view"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <EditText
+                android:id="@+id/txt_price_pro_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:inputType="phone"
+                android:padding="8dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.70"
+                app:layout_constraintStart_toEndOf="@id/txt_price_pro_show"
+                app:layout_constraintTop_toBottomOf="@id/txt_name_pro_view"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

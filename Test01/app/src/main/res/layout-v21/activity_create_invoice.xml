@@ -1,0 +1,1665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_invoice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="InvalidId">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.customer_activity.AddCustomerActivity">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/img_parent"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/img_square_one"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:background="#9fff0000"
+                    android:rotation="45"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/img_parent"
+                    app:layout_constraintStart_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toTopOf="@id/img_parent" />
+
+                <ImageView
+                    android:id="@+id/img_square_two"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="100dp"
+                    android:background="#000000"
+                    android:rotation="45"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/img_parent"
+                    app:layout_constraintStart_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toTopOf="@id/img_parent" />
+
+                <ImageView
+                    android:id="@+id/img_square_there"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="14dp"
+                    android:background="#8f000000"
+                    android:rotation="45"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="@id/img_parent"
+                    app:layout_constraintStart_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="فاکتور فروش"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/img_parent"
+                    app:layout_constraintStart_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toTopOf="@id/img_parent" />
+
+                <Button
+                    android:id="@+id/btn_back_invoice"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_keyboard_backspace_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/btn_recreate_invoice"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/ic_refresh_black_24dp"
+                    app:layout_constraintStart_toEndOf="@id/btn_back_invoice"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txt_show_factor_name_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="6dp"
+                    android:text="کارخانه شماره 1  "
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txt_show_num_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:padding="6dp"
+                    android:text="شماره فاکتور : "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_show_factor_name_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/txt_num_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:inputType="number"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_show_num_invoice"
+                    app:layout_constraintEnd_toStartOf="@id/txt_show_num_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/btn_back_invoice"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txt_show_date_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:padding="6dp"
+                    android:text="تاریخ فاکتور : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edt_date_invoice"
+                    app:layout_constraintEnd_toStartOf="@id/img_parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_num_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/edt_date_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:inputType="date"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_show_date_invoice"
+                    app:layout_constraintEnd_toStartOf="@id/txt_show_date_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/txt_num_invoice" />
+
+                <Button
+                    android:id="@+id/btn_invoice_search_code_cus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#9fff0000"
+                    android:text="جستجو کد خریدار  "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/edt_code_cus_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/img_parent" />
+
+                <EditText
+                    android:id="@+id/edt_code_cus_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:hint="کد؟"
+                    android:inputType="number"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_invoice_search_code_cus"
+                    app:layout_constraintStart_toEndOf="@id/toggleButton"
+                    app:layout_constraintTop_toBottomOf="@id/img_parent" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="#00ffffff"
+                    android:checked="true"
+                    android:text="ToggleButton"
+                    android:textColor="#000000"
+                    android:textOff="خانم"
+                    android:textOn="اقای"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/edt_code_cus_invoice"
+                    app:layout_constraintStart_toEndOf="@id/edt_show_name_cus_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/img_parent" />
+
+                <EditText
+                    android:id="@+id/edt_show_name_cus_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:hint="نام خریدار  "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_invoice_search_code_cus"
+                    app:layout_constraintEnd_toStartOf="@id/toggleButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txt_show_address_cus_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="4dp"
+                    android:text="نشانی:  "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_show_name_cus_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/edt_address_cus_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:hint="نشانی  پیدا شده   "
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/txt_show_address_cus_invoice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_show_name_cus_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txt_show_tel_cus_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:padding="4dp"
+                    android:text="تلفن:  "
+
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edt_tel_cus_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/edt_address_cus_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/edt_tel_cus_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:hint="تلفن  پیدا شده"
+                    android:inputType="phone"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/txt_show_tel_cus_invoice"
+                    app:layout_constraintStart_toEndOf="@id/txt_show_mob_cus_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/edt_address_cus_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txt_show_mob_cus_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:padding="4dp"
+                    android:text="موبایل :  "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/edt_tel_cus_invoice"
+                    app:layout_constraintStart_toEndOf="@id/edt_mob_cus_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/edt_address_cus_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/edt_mob_cus_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center"
+                    android:hint="موبایل  پیدا شده"
+                    android:inputType="phone"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/txt_show_mob_cus_invoice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_address_cus_invoice"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/img_divider_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/edt_mob_cus_invoice" />
+
+                <Button
+                    android:id="@+id/btn_add_code_pro_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#9fff0000"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="جستجو کد محصولات و افزودن به فاکتور"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="0.60"
+                    app:layout_constraintStart_toEndOf="@id/btn_add_row_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/img_divider_invoice" />
+
+                <Button
+                    android:id="@+id/btn_add_row_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+
+                    android:layout_marginEnd="4dp"
+                    android:background="#9fff0000"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="+"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_add_code_pro_invoice"
+                    app:layout_constraintHorizontal_weight="0.20"
+                    app:layout_constraintStart_toEndOf="@id/btn_remove_row_invoice"
+                    app:layout_constraintTop_toBottomOf="@id/img_divider_invoice" />
+
+                <Button
+                    android:id="@+id/btn_remove_row_invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="#9fff0000"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="-"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_add_row_invoice"
+                    app:layout_constraintHorizontal_weight="0.20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_divider_invoice" />
+
+
+                <LinearLayout
+                    android:id="@+id/lay_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/holo_red_light"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_add_code_pro_invoice">
+
+
+                    <!--                header-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="مبلغ کل"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="مبلغ واحد"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="تعداد"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="شرح کالا"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="کد"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="ردیف"
+                            android:textColor="#000000"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <!--row 1-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 2-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 3-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row3"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 4-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row4"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="4"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 5-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row5"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="5"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 6-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row6"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="6"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 7-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row7"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="7"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 8-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row8"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="8"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 9-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row9"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="9"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--row 10-->
+                    <LinearLayout
+                        android:id="@+id/invoice_lay_row10"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_price_pro_row10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_unit_price_pro_row10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.15"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_number_pro_row10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_name_pro_row10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.30"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="........."
+                            android:inputType="text"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/edt_code_pro_row10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.10"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.05"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="10"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <!-- Divider image-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.35"
+                            android:background="#000000"
+                            tools:ignore="Suspicious0dp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+
+                            android:layout_weight="0.65"
+                            android:background="#ffffff"
+                            tools:ignore="Suspicious0dp" />
+                    </LinearLayout>
+
+                    <!--The End Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_total_sum_invoice"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.35"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.45"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.20"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.35"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="000"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.45"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="هزینه ارسال:  "
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.20"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.35"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="000"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.45"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="بدهی قبلی: "
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.20"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.35"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="000"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.45"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="بیانه: "
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.20"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.35"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="000"
+                            android:inputType="number|numberDecimal"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.45"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="تخفیف: "
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.20"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.35"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:text="000"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.45"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="مانده : "
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="0.20"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:text="جمع کل: "
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/img_parent_b"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="40dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/img_square_one_b"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#3fff0000"
+                    android:rotation="45"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/img_parent_b"
+                    app:layout_constraintStart_toStartOf="@id/img_parent_b"
+                    app:layout_constraintTop_toTopOf="@id/img_parent_b" />
+
+                <ImageView
+                    android:id="@+id/img_square_two_b"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="#2f000000"
+                    android:rotation="45"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@id/img_parent_b"
+                    app:layout_constraintStart_toStartOf="@id/img_parent_b"
+                    app:layout_constraintTop_toTopOf="@id/img_parent_b" />
+
+                <ImageView
+                    android:id="@+id/img_square_there_b"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="#5f000000"
+                    android:rotation="45"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/img_parent_b"
+                    app:layout_constraintStart_toStartOf="@id/img_parent_b"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_invoice_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FF1746"
+        android:src="@drawable/ic_done_white_24dp"
+        android:clickable="true"
+        android:focusable="true"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
