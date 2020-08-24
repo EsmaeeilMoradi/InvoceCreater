@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">invoice</string>
+    <string name="app_name">invoice maker</string>
     <string name="send_invoice_Summary_title">Send Invoice Summary</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -7,7 +7,7 @@
     <string name="home_tab">Home</string>
     <string name="products_tab"> products </string>
     <string name="customers_tab">customers </string>
-    <string name="edealsystem">EdealSystem</string>
+    <string name="edealsystem">Invoice maker</string>
     <string name="numinvoice">numInvoice:</string>
     <string name="test_1">test 1</string>
     <string name="id_invoice">id:</string>
