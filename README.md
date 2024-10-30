@@ -1,16 +1,22 @@
 # InvoceCreater
-This application is able to store customer and product information locally. It uses this information when issuing invoices.
-Completing and improving
+This application can store customer and product information locally. 
+It uses this information when issuing invoices.
+
 
 
 
 ## Screenshots
-![Splash Screen](screenshots/splachScreen.png)
-![Login Screen](screenshots/loginScreen.png)
-![Invoice Screen](screenshots/invoiceScreen.png)
-![](screenshots/customerScreen.png)
-![](screenshots/productScreen.png)
-![](screenshots/productScreen2.png)
-![](screenshots/productScreen3.png)
-![Login Screen](screenshots/loginScreen.png)
+<p align="center">
+<img src="screenshots/splachScreen.png" alt="App Screenshot" width="200" height="400"/>
+<img src="screenshots/loginScreen.png" alt="App Screenshot" width="200"  height="400"/>
+<img src="screenshots/invoiceScreen.png" alt="App Screenshot" width="200"  height="400"/>
+</p>
+<p align="center">
+
+<img src="screenshots/customerScreen.png" alt="App Screenshot" width="200"  height="400"/>
+<img src="screenshots/productScreen.png" alt="App Screenshot" width="200"  height="400"/>
+<img src="screenshots/productScreen2.png" alt="App Screenshot" width="200"  height="400"/>
+<img src="screenshots/productScreen3.png" alt="App Screenshot" width="200"  height="400"/>
+</p>
+
 
