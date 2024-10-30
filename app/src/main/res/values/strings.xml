@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">invoice maker</string>
+    <string name="send_invoice_Summary_title">Send Invoice Summary</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_tab">Home</string>
+    <string name="products_tab"> products </string>
+    <string name="customers_tab">customers </string>
+    <string name="edealsystem">Invoice maker</string>
+    <string name="numinvoice">numInvoice:</string>
+    <string name="test_1">test 1</string>
+    <string name="id_invoice">id:</string>
+    <string name="edt_hint_customer_id">Enter id Customer</string>
+    <string name="btn_add">add</string>
+    <string name="btn_code">code:</string>
+    <string name="btn_name">name:</string>
+    <string name="btn_tel">tel:</string>
+    <string name="btn_address">address:</string>
+    <string name="edt_id_product">Enter id Product:</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_sum"><![CDATA[sum :]]></string>
+    <string name="txt_sum">00.00</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="btn_log_in">Log In</string>
+    <string name="btn_register">Register</string>
+    <string name="txt_test_text">****this is test page, click login to continue****</string>
+    <string name="btn_path_account">Already have path account?</string>
+    <string name="test_string">Tis is a test page. you can see all Invoices in phase 2 project after invoices save in application</string>
+    <string name="txt_welcome">Welcome to application</string>
+    <string name="test_home">This is a Test   simple invoicing app  you can see all customers in CUSTOMERS_PAGE   you can see all productArrayList in PRODUCTS_PAGE   you can create a New Invoice by createInvoice button</string>
+    <string name="btn_create_invoice">Create invoice</string>
+    <string name="btn_see_all_invoice">see all invoice</string>
+</resources>

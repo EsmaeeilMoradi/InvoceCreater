@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e62f17"
+    android:orientation="vertical"
+    tools:context=".view.customer_activity.AddCustomerActivity">
+
+
+    <include
+        android:id="@+id/toolbarCustomer"
+        layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/background_create_cus"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lay_one"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/txt_offer_cus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="Offer Code :  "
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbarCustomer"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <TextView
+                android:id="@+id/txt_offer_code_cus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/txt_offer_cus"
+                app:layout_constraintTop_toBottomOf="@id/toolbarCustomer"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <EditText
+                android:id="@+id/edt_code_cus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:hint=" Enter Code Of Customer "
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_offer_cus"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/txt_code_cus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text=" Code :  "
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_offer_code_cus"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imgDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#7f7f7f"
+                app:layout_constraintTop_toBottomOf="@id/txt_code_cus" />
+
+            <EditText
+                android:id="@+id/edt_name_cus"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:hint="Enter Name Of Customer"
+                android:inputType="textPersonName"
+                android:padding="6dp"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_code_cus" />
+
+            <EditText
+                android:id="@+id/edt_tel_cus"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:hint="Enter Tel Of Customer"
+                android:inputType="phone"
+                android:padding="8dp"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_cus" />
+
+            <EditText
+                android:id="@+id/edt_mobile_cus"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:hint="Enter Mobile Of Customer"
+                android:inputType="phone"
+                android:padding="8dp"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_tel_cus" />
+
+            <EditText
+                android:id="@+id/edt_email_cus"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:hint="Enter Email Of Customer"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_mobile_cus" />
+
+            <EditText
+                android:id="@+id/edt_address_cus"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:hint="Enter Address Of Customer"
+                android:inputType="textLongMessage"
+                android:padding="8dp"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_email_cus" />
+
+            <EditText
+                android:id="@+id/edt_desc_cus"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:hint="Description Of Customer"
+                android:inputType="textLongMessage"
+                android:padding="4dp"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_address_cus" />
+
+
+            <Button
+                android:id="@+id/btn_save_cus"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/border_edt"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Save"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
